@@ -1,0 +1,39 @@
+@use './index.css';
+
+// color palette
+$bg-light: #D4D0C4;
+$bg-dark: #2D2D2D;
+$orange: #FF6F1E;
+$black: #222222;
+$beige: #B4B1A7;
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--background);
+}
+
+html {
+  overscroll-behavior: none;
+  overflow-y: hidden;
+}
+
+.title-app {
+  font-family: 'Shrikhand', cursive;
+  font-size: 3rem;
+  user-select: none;
+  color: #FF6F1E;
+
+  & span {
+    -webkit-text-stroke: 3px #FF6F1E;
+    color: #D4D0C4;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .title-app span {
+    color: #2D2D2D;
+  }
+}

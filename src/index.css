@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  --background: #D4D0C4;
+}
+
+body.dark {
+  --background: #2D2D2D;
+}
