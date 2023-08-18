@@ -1,0 +1,15 @@
+footer {
+    color: #2D2D2D;
+    font-family: 'Overpass Mono', monospace;
+
+    & a {
+        color: #FF6F1E;
+        text-decoration: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    footer {
+        color: #F4EFE1;
+    }
+  }
