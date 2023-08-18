@@ -2,13 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 1.9rem 0 0;
 }
 
 .toggle-label {
     position: relative;
     display: inline-block;
     width: 73px; // recalculated length from 60px to 73px using Figma
-    height: 34px;
+    height: 40px;
     margin: 0 0.8rem;
 
     & input {
@@ -20,20 +21,22 @@
 }
 
 body {
-    --boxshadow: 10px 10px 10px 0px rgba(180, 177, 167, 0.25) inset, -10px -10px 10px 0px rgba(244, 239, 225, 0.55) inset, 10px 10px 24px 0px #B4B1A7, -10px -10px 24px 0px rgba(244, 239, 225, 0.55);
+    --boxshadow: 5px 5px 5px 0px rgba(180, 177, 167, 0.25) inset, -5px -5px 5px 0px rgba(244, 239, 225, 0.55) inset, 5px 5px 24px 0px #B4B1A7, -5px -5px 24px 0px rgba(244, 239, 225, 0.55);
     --background-color: #D4D0C4;
     --inner-boxshadow: 5px 5px 10px 0px #B4B1A7, -5px -5px 10px 0px rgba(244, 239, 225, 0.55);
     --darkbulb: #B4B1A7;
     --lightbulb: #FF6F1E;
+    --toggle: #D4D0C4;
 }
 
-
 .dark {
-    --boxshadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25) inset, -10px -10px 10px 0px rgba(64, 64, 64, 0.55) inset, 10px 10px 24px 0px rgba(0, 0, 0, 0.25), -10px -10px 24px 0px rgba(64, 64, 64, 0.55);
+    --boxshadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25) inset, -5px -5px 5px 0px rgba(64, 64, 64, 0.55) inset, 5px 5px 24px 0px rgba(0, 0, 0, 0.25), -5px -5px 24px 0px rgba(64, 64, 64, 0.55);
     --background-color: #2D2D2D;
-    --inner-boxshadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px rgba(64, 64, 64, 0.55);
+    --inner-boxshadow: -3px 3px 5px #252525,
+    3px -3px 10px #353535;
     --darkbulb: #D4D0C4;
     --lightbulb: #222;
+    --toggle: #2D2D2D;
 }
 
 .toggle-span {
@@ -46,29 +49,30 @@ body {
     box-shadow: var(--boxshadow);
     -webkit-transition: .4s;
     transition: .4s ease-in-out;
-    border-radius: 3px;
+    border-radius: 6px;
     background-color: var(--background-color);
 
     // inner box for the toggle switch
     &:before {
         position: absolute;
         content: "";
-        height: 26px;
+        height: 30px;
         width: 26px;
-        left: 4px;
-        bottom: 4px;
+        left: 5px;
+        bottom: 5px;
+        background-color: var(--toggle);
         box-shadow: var(--inner-boxshadow);
         -webkit-transition: .4s;
         transition: .4s ease-in-out;
-        border-radius: 3px;
+        border-radius: 6px;
     }
 }
 
 input:checked+.toggle-span:before {
     // recalculated to 39px from 26px using Figma
-    -webkit-transform: translateX(39px);
-    -ms-transform: translateX(39px);
-    transform: translateX(39px);
+    -webkit-transform: translateX(38px);
+    -ms-transform: translateX(38px);
+    transform: translateX(38px);
 }
 
 .lightbulb {

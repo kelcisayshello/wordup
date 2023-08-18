@@ -1,0 +1,43 @@
+body {
+    --container-bg: #D4D0C4;
+    --txtarea-bg: #F4F3EE;
+    --txtarea-boxshadow: -8px -8px 24px 0px rgba(244, 239, 225, 0.55), 8px 8px 24px 0px #B4B1A7;
+    --txtarea-outline: #FF6F1E;
+}
+
+.dark {
+    --container-bg: #2D2D2D;
+    --txtarea-bg: #3E3E3E;
+    --txtarea-boxshadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.25), -8px -8px 24px 0px #404040;
+    --txtarea-outline: rgba(180, 177, 167, 0.55);
+}
+
+.textbox-container {
+    margin: 1.4rem auto;
+    background-color: var(--container-bg);
+    box-shadow: var(--txtarea-boxshadow);
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+    & textarea {
+        resize: none;
+        border: 1.1px solid var(--txtarea-outline);
+        border-radius: 8px;
+        background-color: var(--txtarea-bg);
+        padding: 1rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    
+        width: 96%;
+        height: 92%;
+
+        &:focus {
+            outline: 0px solid var(--txtarea-outline);
+        }
+    }
+}

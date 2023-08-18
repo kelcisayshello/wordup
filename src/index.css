@@ -12,10 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-family: 'Overpass Mono', monospace;
 }
 
 html {
   font-size: 16px;
+  overflow: hidden;
 }
 
 body {
@@ -26,4 +28,10 @@ body {
 .dark {
   --background: #2D2D2D;
   --color: #B4B1A7;
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow: scroll;
+  }
 }

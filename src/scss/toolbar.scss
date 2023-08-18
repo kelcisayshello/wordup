@@ -1,0 +1,89 @@
+body {
+    --stats-color: #2D2D2D;
+    --stats-box-shadow: 5px 5px 16px 0px #B4B1A7, -5px -5px 16px 0px rgba(244, 239, 225, 0.55);
+    --stats-bg: #D4D0C4;
+    --button-press: 5px 5px 5px 0px rgba(180, 177, 167, 0.25) inset, -5px -5px 5px 0px rgba(244, 239, 225, 0.55) inset;
+
+}
+
+.dark {
+    --stats-color: #F4EFE1;
+    --stats-box-shadow: 5px 5px 16px 0px rgba(0, 0, 0, 0.25), -5px -5px 16px 0px #404040;
+    --stats-bg: #2D2D2D;
+    --button-press: 5px 5px 5px 0px rgba(0, 0, 0, 0.25) inset, -5px -5px 5px 0px rgba(64, 64, 64, 0.55) inset;
+
+}
+
+.toolbar-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    & button {
+        border: none;
+        
+        &:active {
+            box-shadow: var(--button-press);
+        }
+    }
+
+    & svg {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+}
+
+.stats {
+    padding: 0.8rem;
+    border-radius: 6px;
+    background: var(--stats-bg);
+    box-shadow: var(--stats-box-shadow);
+    width: max-content;
+    margin: 0 0.9rem 0 0;
+    color: var(--stats-color);
+}
+
+.words span {
+    color: var(--stats-color);
+    font-weight: 700;
+}
+
+.characters {
+    margin: 0 1.9rem 0 0;
+
+    & span {
+        color: #3E5EFD;
+        font-weight: 700;
+    }
+}
+
+.clear,
+.copy {
+    display: flex;
+    align-items: center;
+
+    & svg {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.clear {
+    fill: #FF6F1E;
+    align-self: flex-end;
+    margin-right: 0;
+}
+
+.copy {
+    fill: var(--stats-color);
+    align-self: flex-end;
+    margin: 0 0.9rem 0 auto;
+}
+
+@media (max-width: 768px) {
+    .clear {
+      align-self:normal;
+    }
+  }

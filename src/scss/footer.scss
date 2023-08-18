@@ -1,6 +1,18 @@
+body {
+    --github:  #F4EFE1;
+}
+
+.dark {
+    --github: #222;
+}
+
 footer {
     color: var(--color);
     font-family: 'Overpass Mono', monospace;
+
+    & p {
+        margin: 0.2rem 0;
+    }
 
     & a {
         color: #FF6F1E;
@@ -10,5 +22,10 @@ footer {
         &:hover {
             text-decoration: underline solid #FF6F1E;
         }
+    }
+
+    & .github {
+        opacity: 0.8;
+        fill: var(--github);
     }
 }

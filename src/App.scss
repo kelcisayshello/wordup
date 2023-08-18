@@ -15,16 +15,12 @@ body {
   background-color: var(--background);
 }
 
-html {
-  overscroll-behavior: none;
-  overflow-y: hidden;
-}
-
 .title-app {
   font-family: 'Shrikhand', cursive;
   font-size: 3rem;
   user-select: none;
   color: #FF6F1E;
+  margin: 0 auto 3rem;
 
   & span {
     -webkit-text-stroke: 3px #FF6F1E;
