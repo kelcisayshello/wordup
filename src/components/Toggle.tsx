@@ -19,14 +19,10 @@ export default function Toggle() {
     );
 
     useEffect(() => {
-        let toggle = document.getElementById("toggle");
-
         if (value) {
             document.body.classList.add('dark');
-            toggle?.classList.add("dark");
         } else {
             document.body.classList.remove('dark');
-            toggle?.classList.remove("dark");
         }
     }, [value]);
 

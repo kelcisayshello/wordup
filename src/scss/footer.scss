@@ -4,6 +4,11 @@ footer {
 
     & a {
         color: #FF6F1E;
-        text-decoration: none;
+        text-decoration: underline solid transparent;
+        transition: text-decoration 0.6s ease;
+
+        &:hover {
+            text-decoration: underline solid #FF6F1E;
+        }
     }
 }

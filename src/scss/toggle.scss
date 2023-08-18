@@ -11,11 +11,29 @@
     height: 34px;
     margin: 0 0.8rem;
 
-    & input {   // hide original checkbox input style
+    & input {
+        // hide original checkbox input style
         opacity: 0;
         width: 0;
         height: 0;
     }
+}
+
+body {
+    --boxshadow: 10px 10px 10px 0px rgba(180, 177, 167, 0.25) inset, -10px -10px 10px 0px rgba(244, 239, 225, 0.55) inset, 10px 10px 24px 0px #B4B1A7, -10px -10px 24px 0px rgba(244, 239, 225, 0.55);
+    --background-color: #D4D0C4;
+    --inner-boxshadow: 5px 5px 10px 0px #B4B1A7, -5px -5px 10px 0px rgba(244, 239, 225, 0.55);
+    --darkbulb: #B4B1A7;
+    --lightbulb: #FF6F1E;
+}
+
+
+.dark {
+    --boxshadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25) inset, -10px -10px 10px 0px rgba(64, 64, 64, 0.55) inset, 10px 10px 24px 0px rgba(0, 0, 0, 0.25), -10px -10px 24px 0px rgba(64, 64, 64, 0.55);
+    --background-color: #2D2D2D;
+    --inner-boxshadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25), -5px -5px 10px 0px rgba(64, 64, 64, 0.55);
+    --darkbulb: #D4D0C4;
+    --lightbulb: #222;
 }
 
 .toggle-span {
@@ -25,39 +43,38 @@
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 10px 10px 10px 0px rgba(180, 177, 167, 0.25) inset, -10px -10px 10px 0px rgba(244, 239, 225, 0.55) inset, 10px 10px 24px 0px #B4B1A7, -10px -10px 24px 0px rgba(244, 239, 225, 0.55);
+    box-shadow: var(--boxshadow);
     -webkit-transition: .4s;
     transition: .4s ease-in-out;
     border-radius: 3px;
+    background-color: var(--background-color);
 
-    background-color: #D4D0C4;
-
-    &:before {  // inner toggle box
+    // inner box for the toggle switch
+    &:before {
         position: absolute;
         content: "";
         height: 26px;
         width: 26px;
         left: 4px;
         bottom: 4px;
-        // background-color: $bg-light;
-        box-shadow: 5px 5px 10px 0px #B4B1A7, -5px -5px 10px 0px rgba(244, 239, 225, 0.55);
-    
+        box-shadow: var(--inner-boxshadow);
         -webkit-transition: .4s;
         transition: .4s ease-in-out;
         border-radius: 3px;
     }
 }
 
-input:focus+.toggle-span {
-    box-shadow: 10px 10px 10px 0px rgba(180, 177, 167, 0.25) inset, -10px -10px 10px 0px rgba(244, 239, 225, 0.55) inset, 10px 10px 24px 0px #B4B1A7, -10px -10px 24px 0px rgba(244, 239, 225, 0.55);
-}
-
-input:checked+.toggle-span:before { // recalculated to 39px from 26px using Figma
+input:checked+.toggle-span:before {
+    // recalculated to 39px from 26px using Figma
     -webkit-transform: translateX(39px);
     -ms-transform: translateX(39px);
     transform: translateX(39px);
 }
 
-@media (prefers-color-scheme: dark) {
+.lightbulb {
+    fill: var(--lightbulb);
+}
 
+.darkbulb {
+    fill: var(--darkbulb);
 }
