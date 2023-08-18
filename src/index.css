@@ -20,8 +20,10 @@ html {
 
 body {
   --background: #D4D0C4;
+  --color: #2D2D2D;
 }
 
-body.dark {
+.dark {
   --background: #2D2D2D;
+  --color: #B4B1A7;
 }
