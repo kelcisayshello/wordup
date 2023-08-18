@@ -1,7 +1,7 @@
 import Toolbar from './components/Toolbar'
 import Footer from './components/Footer'
 import TextBox from './components/TextBox'
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss'
 
 export default function App() {
