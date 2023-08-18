@@ -5,11 +5,11 @@ export default function TextBox() {
         <>
             <div className="textbox-container">
                 <textarea 
+                    id={"textbox"}
                     name="textbox" 
                     placeholder="Paste text here . . . "
                     rows={15}
-                >
-                </textarea>
+                />
             </div>
         </>
     )
