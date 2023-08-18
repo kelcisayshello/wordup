@@ -20,6 +20,8 @@ body {
     width: 70%;
     margin: 0 auto;
     flex-wrap: wrap;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
 
     & button {
         border: none;
@@ -43,6 +45,29 @@ body {
     width: max-content;
     margin: 0 0.9rem 0 0;
     color: var(--stats-color);
+}
+
+@media (max-width: 480px) { 
+    .toolbar-container {
+        width: 95%;
+
+        & .characters, .copy {
+            margin-right: 0;
+        }
+
+        & .words {
+            margin-top: 0;
+        }
+
+        & .clear {
+            margin-bottom: 0;
+        }
+    }
+
+    .stats {
+        width: 100%;
+        margin: 1rem 0;
+    }
 }
 
 .words span {

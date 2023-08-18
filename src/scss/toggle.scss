@@ -3,6 +3,14 @@
     justify-content: center;
     align-items: center;
     margin: 0 1.9rem 0 0;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+}
+
+@media (max-width: 480px) { 
+    .toggle-container {
+        margin: 1rem auto;
+    }
 }
 
 .toggle-label {

@@ -1,5 +1,5 @@
 body {
-    --github:  #F4EFE1;
+    --github: #F4EFE1;
 }
 
 .dark {
@@ -25,7 +25,13 @@ footer {
     }
 
     & .github {
-        opacity: 0.8;
+        opacity: 0.9;
         fill: var(--github);
+
+        & svg {
+            height: 1.4rem;
+            width: auto;
+            margin-top: 5px;
+        }
     }
 }
