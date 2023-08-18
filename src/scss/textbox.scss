@@ -49,11 +49,12 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 940px) {
     .textbox-container {
         width: 95%;
         margin-bottom: 1.9rem;
         box-shadow: none;
+        margin-top: 0.4rem;
 
         & textarea {
             width: 100%;

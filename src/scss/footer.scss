@@ -24,6 +24,12 @@ footer {
         }
     }
 
+    @media (max-width: 940px) {
+        a {
+            text-decoration: none;
+        }
+    }
+
     & .github {
         opacity: 0.9;
         fill: var(--github);

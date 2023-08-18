@@ -21,11 +21,12 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     user-select: none;
-    -webkit-user-select: none; /* Safari */
+    -webkit-user-select: none;
+    /* Safari */
 
     & button {
         border: none;
-        
+
         &:active {
             box-shadow: var(--button-press);
         }
@@ -47,11 +48,13 @@ body {
     color: var(--stats-color);
 }
 
-@media (max-width: 480px) { 
+// iphone pro max portrait mode
+@media (max-width: 480px) {
     .toolbar-container {
         width: 95%;
 
-        & .characters, .copy {
+        & .characters,
+        .copy {
             margin-right: 0;
         }
 
@@ -67,6 +70,13 @@ body {
     .stats {
         width: 100%;
         margin: 1rem 0;
+    }
+}
+
+// iphone pro max landscape mode {
+@media (max-width: 940px) {
+    .toolbar-container {
+        width: 95%;
     }
 }
 
@@ -109,6 +119,6 @@ body {
 
 @media (max-width: 768px) {
     .clear {
-      align-self:normal;
+        align-self: normal;
     }
-  }
+}

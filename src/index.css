@@ -20,6 +20,12 @@ html {
   overflow: hidden;
 }
 
+@media (max-width: 940px) {
+  html {
+      overflow: scroll
+  }
+}
+
 body {
   --background: #D4D0C4;
   --color: #2D2D2D;
