@@ -11,7 +11,7 @@ export default function TextBox({onchange}: TextBoxProps) {
                 <textarea 
                     id={"textbox"}
                     name="textbox" 
-                    placeholder="Paste text here . . . "
+                    placeholder="Paste your text here . . . "
                     rows={15}
                     onChange={onchange}
                     spellCheck="true"
