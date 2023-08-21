@@ -30,8 +30,13 @@ export default function App() {
   let btnClear: HTMLButtonElement = document.getElementById("clearBTN") as HTMLButtonElement;
   if (btnClear) {
     btnClear.onclick = function () {
-      setWordCount(0);
-      setCharCount(0);
+
+      let choice = confirm("Hey! 👋 Are you sure you would like to clear all text input?");
+      if (choice) {
+        setText("");
+        setWordCount(0);
+        setCharCount(0);
+      }
     }
   }
 
@@ -40,7 +45,7 @@ export default function App() {
       <h1 className="title-app">Word<span>Up</span></h1>
 
       <Toolbar words={wordCount} chars={charCount} />
-      <TextBox onchange={changeHandler} />
+      <TextBox usertext={text} onchange={changeHandler} />
       <Footer />
     </>
   )
