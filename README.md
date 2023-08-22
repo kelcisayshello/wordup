@@ -14,7 +14,7 @@ Thanks for using *WordUp*, a neumorphic word counter featuring [FontAwesome](htt
 * 💡 WordUp themes include a dark and light mode with support for device native theme preferences
 
 ### Background
-[WordUp](https://www.kelcimensah.dev/wordup) is a no-bloat online tool that live counts the number of words and characters in typed (or pasted) text by using the React `useState` hook. WordUp was built with simplicity in mind and does not use any external plug-ins, add-ons, or text checkers — nor plans to. This is so you can rest assured your text isn't being stored or used anywhere else.
+[WordUp](https://www.kelcimensah.dev/wordup) is a no-bloat online tool that counts the number of words and characters of typed (or pasted) text. WordUp was built with simplicity in mind and does not use any external plug-ins, add-ons, or text checkers — nor plans to. This is so you can rest assured your text isn't being stored or used anywhere else.
 
 ### Reporting an issue?
 Email me any time at `kelcimensah@gmail.com` with the subject line `[WordUp] {YOUR ISSUE HERE}` (without the `{` and `}` characters).
